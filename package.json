@@ -1,0 +1,30 @@
+{
+  "name": "ts-next",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev:watch": "NODE_ENV=development nodemon ./server",
+    "dev": "NODE_ENV=development node ./src/server",
+    "build": "next build ./src",
+    "start": "NODE_ENV=production node ./src/server"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.2.1",
+    "@material-ui/icons": "^4.2.1",
+    "express": "^4.17.1",
+    "next": "^9.0.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^12.6.8",
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.4",
+    "eslint-plugin-babel": "^5.3.0",
+    "nodemon": "^1.19.1",
+    "typescript": "^3.5.3"
+  }
+}
