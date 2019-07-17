@@ -1,9 +1,9 @@
 # Typescript Nextjs
 
-[x] Nextjs
-[x] Express
-[x] Material UI
-[x] Redux
+* [x] Nextjs
+* [x] Express
+* [x] Material UI
+* [x] Redux
 
 ## Usage
 
