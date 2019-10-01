@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Head from 'next/head';
 import { makeStyles } from '@material-ui/styles';
 import { Theme } from '@material-ui/core';
 
@@ -26,11 +27,16 @@ const Layout: React.SFC = (props) => {
 	const classes = useStyles(props);
 
 	return (
-		<div className={classes.container}>
-			<main className={classes.content}>
-				{props.children}
-			</main>
-		</div>
+		<>
+			<Head>
+				<title>TSNext</title>
+			</Head>
+			<div className={classes.container}>
+				<main className={classes.content}>
+					{props.children}
+				</main>
+			</div>
+		</>
 	);
 }
 
