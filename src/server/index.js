@@ -6,7 +6,7 @@ const dev = process.env.NODE_ENV !== 'production';
 const port = process.env.port || 3000;
 const app = next({
 	dev,
-	dir: dev ? path.resolve('./src') : path.resolve('./dist'),
+	dir: dev ? path.resolve('./src') : path.resolve('./src'),
 });
 const handle = app.getRequestHandler();
 
