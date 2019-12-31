@@ -1,5 +1,5 @@
 import React from 'react';
-import App, { Container } from 'next/app';
+import App from 'next/app';
 import { Provider as ReduxProvider } from 'react-redux';
 import { CssBaseline, createMuiTheme, Container as MuiContainer } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/styles';
@@ -30,18 +30,16 @@ class MyApp extends App {
 		const { Component, pageProps } = this.props;
 
 		return (
-			<Container>
-				<ReduxProvider store={store}>
-					<ThemeProvider theme={theme}>
-						<CssBaseline />
-						<MuiContainer maxWidth={false}>
-							<PageLayout>
-								<Component {...pageProps} />
-							</PageLayout>
-						</MuiContainer>
-					</ThemeProvider>
-				</ReduxProvider>
-			</Container>
+			<ReduxProvider store={store}>
+				<ThemeProvider theme={theme}>
+					<CssBaseline />
+					<MuiContainer maxWidth={false}>
+						<PageLayout>
+							<Component {...pageProps} />
+						</PageLayout>
+					</MuiContainer>
+				</ThemeProvider>
+			</ReduxProvider>
 		);
 	}
 }
