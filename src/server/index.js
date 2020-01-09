@@ -13,7 +13,7 @@ const handle = app.getRequestHandler();
 app.prepare().then(() => {
 	const server = express();
 
-	server.disable('X-Powered-By');
+	server.disable('x-powered-by');
 
 	server.get('/_next/*', (req, res) => {
 		handle(req, res);
